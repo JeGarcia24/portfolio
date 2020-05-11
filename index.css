@@ -137,6 +137,18 @@ header{
      border: 2px solid #FD3A0F;
      font-size: 25px;
  }
+ .github{
+     display: block;
+     margin: 20px;
+     color: #D4F7D4;
+     font-size: 35px;
+     text-decoration: none;
+ }
+ .github .fa{ margin: 0px 10px; }
+ .github:hover{
+     text-decoration: none;
+     color: #FD3A0F;
+ }
 
 /* About */
 #about{
