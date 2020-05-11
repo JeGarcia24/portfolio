@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav class="topnav" id="navbar">
+          <div id="navList">
+            <a class="navLink" href="#home">Home</a>
+            <a class="navLink" href="#about">About</a>
+            <a class="navLink" href="#portfolio" id="portfolioNav">Portfolio</a>
+            <a href="#myModal" class="navLink" data-toggle="modal" data-target="#myModal" data-backdrop="static">Email</a>
+          </div>
+          <a class="menu" href="javascript:void(0)" onclick="responsiveNavbar()">
+            <span class="menu-line"></span>
+          </a>
+        </nav>
+      </header>
+      <div id="modal-container">
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>jeralyn.garcia@yahoo.com</p>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info btn-md close-button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="home">
+        <div id="myInfoContainer">
+          <span class="myInfo" id="welcome">I'm <span id="myName">Jeralyn Garcia</span></span>
+          <span class="myInfo" id="job">Front-end Web Developer</span>
+          <a class="portfolio-button" href="#portfolio">Portfolio</a>
+        </div>
+        <div class="overlay"></div>
+      </section>
+      <section id="about">
+        <div id="forHeader"></div>
+        <div id="aboutPageContainer">
+          <div id="aboutMe">
+            <h1 id="aboutHeader">About me</h1>
+            <p id="aboutMeBody">I'm a self-taught front-end developer from Laguna, Philippines.</br>
+              I love web development and creating applications for desktop and mobile use.
+            </p>
+          </div>
+          <div id="skills">
+            <h2 id="skillsHeader">Skills</h2>
+            <div id="skillSet">
+              <diV class="language">
+                <p class="skillTitle">Programming Languages</p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </diV>
+              <div class="language">
+                <p class="skillTitle">Front-end Libraries</p>
+                <ul>
+                  <li>Bootstrap</li>
+                  <li>jQuery</li>
+                  <li>React</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="cube">
+            <div class="wrapper">
+              <div class="box-area">
+                <div class="box-side" id="html5"></div>
+                <div class="box-side" id="css"></div>
+                <div class="box-side" id="js"></div>
+                <div class="box-side" id="bootstrap"></div>
+                <div class="box-side" id="jquery"></div>
+                <div class="box-side" id="react"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div id="projectContainer">
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-easybank-landing-page.jpg" alt="preview-image">
+              <span class="projectDescription" id="easybankProject">This website design is a challenge by 
+                <span> 
+                  <a class="source" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>
+                </span>
+                in which I created code. 
+                Used HTML, CSS, Javascript for responsive navbar animation, Bootstrap and jQuery for modal, 
+                fontAwesome for social media icons. This is mobile responsive.
+                <div class="descriptionLink">
+                <a class="projectLink" href="https://jegarcia24.github.io/easybank-landing-page/" target="_blank">Visit Website</a>
+                <a class="githubLink" href="https://github.com/JeGarcia24/easybank-landing-page" target="_blank">Open Source</a>
+              </div>
+              </span>
+            </div>
+            <p class="projectTitle">Landing Page</p>
+          </div>
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-to-do-list.jpg" alt="preview-image">
+              <span class="projectDescription" id="toDoListProject">To-Do List application with time, date, day, and 
+                a quote generator that shuffles quote every 30 seconds.
+                Used HTML, CSS, jQuery and bootstrap for Javascript functions, 
+                fontAwesome for quote sign. This is mobile responsive.
+                <div class="descriptionLink">
+                  <a class="projectLink" href="https://jegarcia24.github.io/to-do-list/" target="_blank">Visit Website</a>
+                  <a class="githubLink" href="https://github.com/JeGarcia24/to-do-list" target="_blank">Open Source</a>
+                </div>
+              </span>
+            </div>
+              <p class="projectTitle">To-Do List</p>
+          </div>
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-pomodoro-clock.jpg" alt="preview-image">
+              <span class="projectDescription">This is productivity timer with audio 
+                  warning when changing timer state. Used HTML, CSS, React Javascript, 
+                  fontAwesome, and Bootstrap. This is mobile responsive.
+                <div class="descriptionLink">
+                  <a class="projectLink" href="https://jegarcia24.github.io/pomodoro-clock/" target="_blank">Visit Website</a>
+                  <a class="githubLink" href="https://github.com/JeGarcia24/pomodoro-clock" target="_blank">Open Source</a>
+                </div>
+              </span>
+            </div>
+              <p class="projectTitle">Pomodoro Clock</p>
+          </div>
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-rock-paper-scissors_game.jpg" alt="preview-image">
+              <span class="projectDescription">Rock-paper-scrissors game with hand shake animation, 
+                score game, and reset game button. Used HTML, CSS, 
+                Javascript for functions, Bootstrap and jQuery for modal.
+                This is mobile responsive.
+                <div class="descriptionLink"> 
+                  <a class="projectLink" href="https://jegarcia24.github.io/rock-paper-scissors_game/" target="_blank">Visit Website</a>
+                  <a class="githubLink" href="https://github.com/JeGarcia24/rock-paper-scissors_game" target="_blank">Open Source</a>
+                </div>
+              </span>
+            </div>
+              <p class="projectTitle">Rock-Paper-Scissors Game</p>
+            </a>
+          </div>
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-calculator.jpg" alt="preview-image">
+              <span class="projectDescription">This is a formula logic calculator with equation display 
+                and input display. Used HTML, CSS, React Javascript and Bootstrap for style.
+                This is mobile responsive.
+              <div class="descriptionLink"> 
+                <a class="projectLink" href="https://jegarcia24.github.io/calculator/" target="_blank">Visit Website</a>
+                <a class="githubLink" href="https://github.com/JeGarcia24/calculator" target="_blank">Open Source</a>
+              </div>
+              </span>
+            </div>
+              <p class="projectTitle">Calculator</p>
+          </div>
+          <div class="projects">
+            <div class="imageContainer">
+              <img class="project-image" src="images/projects-drum-machine.jpg" alt="preview-image">
+              <span class="projectDescription">Each key contains audio clip and displays instrument's name. 
+                It has keycodes for keyboard access.
+                Used HTML, CSS, React Javascript, and Bootstrap for styles.
+                This is mobile responsive.
+                <div class="descriptionLink"> 
+                  <a class="projectLink" href="https://jegarcia24.github.io/drum-machine/" target="_blank">Visit Website</a>
+                  <a class="githubLink" href="https://github.com/JeGarcia24/drum-machine" target="_blank">Open Source</a>
+                </div>
+              </span>
+            </div>
+              <p class="projectTitle">Drum Machine</p>
+          </div>
+        </div>
+      </section> 
+    </div>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
+
+

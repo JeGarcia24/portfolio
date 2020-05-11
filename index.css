@@ -1,0 +1,420 @@
+/*
+color theme: complementary
+#D4F7D4
+#559E54
+#FD3A0F
+#B83214
+#341109
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: center;
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    position: fixed;
+    width: 100vw;
+    max-width: 1920px;
+    z-index: 30;
+}
+
+/* Hamburger menu in mobile responsive*/
+.menu{
+    float: right;
+    margin: 40px 40px;
+    }
+.menu-line{
+    display: block;
+    position: relative;
+}
+.menu-line,
+.menu-line::before,
+.menu-line::after{
+    width: 30px;
+    height: 5px;
+    background-color:#FD3A0F;
+    transition: transform 250ms ease-in-out;
+}
+.menu-line::before,
+.menu-line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+.menu-line::before{ bottom: 10px; }
+.menu-line::after{ top: 10px; }
+
+/*Open and Close Nav Menu with JS function*/
+.topnav.responsive {
+    position: relative;
+    background-color: #341109;
+}
+.topnav.responsive a.menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.topnav.responsive a.navLink {
+    display: block;
+    padding: 20px;
+    font-size: 30px;
+    color: #D4F7D4;
+    text-decoration: none;
+}
+.topnav.responsive a.navLink:hover {
+    display: block;
+    padding: 20px;
+    font-size: 28px;
+    color: #FD3A0F;
+    text-decoration: none;
+}
+.topnav.responsive #navList{ 
+    padding-top: 100px; 
+    margin: auto;
+}
+/*Hamburger menu animation (menu to x)*/
+.topnav.responsive .menu{ transform: rotate(45deg); }
+.topnav.responsive .menu-line::before{ opacity: 0; }
+.topnav.responsive .menu-line::after{
+    transform: rotate(90deg) translate(-10px);
+}
+
+/* Home */
+#home{
+    color: #D4F7D4;
+    background-image: url("images/home-mobile.jpg");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(30, 30, 30);
+    opacity: .9;
+}
+.myInfo{ display: block; }
+#myInfoContainer{
+    margin: auto;
+    z-index: 20;
+}
+#welcome{
+    font-size: 40px;
+    padding: 20px;
+}
+#job{
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.portfolio-button{
+    color: #FD3A0F;
+    font-size: 30px;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-weight: bolder;
+    border: 2px solid #D4F7D4;
+ }
+ .portfolio-button:hover{
+     text-decoration: none;
+     color: #D4F7D4;
+     border: 2px solid #FD3A0F;
+     font-size: 25px;
+ }
+
+/* About */
+#about{
+    background-color: #D4F7D4;
+    color: #341109;
+    padding-bottom: 30px;
+}
+#aboutPageContainer{
+    margin: 30px auto;
+}
+#aboutMe{
+    padding: 30px 20px;
+}
+#aboutMeBody{
+    font-size: 16px;
+}
+#skills{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ul{
+    list-style-type: none;
+}
+.skillTitle{
+    font-size: 25px;
+}
+
+.language{
+    padding: 20px;
+    margin: auto;
+}
+
+/* Cube Animation*/
+.wrapper{
+    width: 200px;
+    height: 200px;
+    margin: 30px auto 30px auto;
+}
+.box-area{
+    animation: animateCube 10s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+}
+.box-area div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+}
+.box-side{
+    background-size: cover;
+    background-position: center center;
+}
+#html5{
+    background-image: url("images/language-html5.jpg");
+    transform: translateZ(100px);
+}
+#css{
+    background-image: url("images/language-css.jpg");
+    transform: rotateY(90deg) translateZ(100px);
+}
+#js{
+    background-image: url("images/language-js.jpg");
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+#bootstrap{
+    background-image: url("images/language-bootstrap.jpg");
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+#jquery{
+    background-image: url("images/language-jquery.jpg");
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+#react{
+    background-image: url("images/language-react.jpg");
+    transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes animateCube{
+    from, to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+        transform: rotateX(90deg);
+    }
+}
+
+/* Portfolio */
+#portfolio{
+    background-color: #559E54;
+    color: #D4F7D4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#projectContainer{
+    width: 350px;
+    max-width: 100%;
+    margin: auto;
+}
+.projects {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+.imageContainer{
+    position: relative;
+}
+.project-image{
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+}
+.projectDescription{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color:  #341109;
+    color: #559E54;
+    font-size: 16px;
+    padding: 10px 5px;
+}
+.imageContainer:hover .projectDescription{
+    opacity: 1;
+    visibility: visible;
+}
+.descriptionLink{
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    left: 5px;
+}
+.projectLink, .githubLink{
+    color: #FD3A0F;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    border: 2px solid #D4F7D4;
+    margin: 0px 10px;
+}
+.projectLink:hover{ border: 2px solid #FD3A0F; }
+.projectTitle{
+    color: #559E54;
+    background-color: #341109;
+    padding: 5px;
+}
+.projectLink:hover, 
+.githubLink:hover{
+    text-decoration: none;
+    color: #D4F7D4;
+}
+
+/* Modal for Contact */
+.modal-body{
+    background-color: hsl(233, 8%, 62%); 
+    color: hsl(0, 0%, 100%);
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center; 
+}
+.modal-body p{
+    margin: 10px;
+    font-size: 25px;
+}
+.modal-dialog{ width: 350px !important; }
+.modal-footer{
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-icon{ margin: 20px; }
+#myModal{ padding-top: 200px; }
+
+@media(min-width: 600px){
+    .menu{ display: none; }
+    header{ padding: 5px; }
+    .topnav a.navLink{
+        color: #D4F7D4;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;    
+    }
+    .topnav #navList{
+        text-align: right;
+        margin-right: 80px;
+        padding: 8px;
+    }
+
+    /* underline on hover */
+    .navLink{ position: relative; }
+    .navLink:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0px;
+        height: 4px;
+        width: 100%;
+        background-color: #FD3A0F;
+    }
+    #portfolioNav{ color: #FD3A0F; }
+    #portfolioNav:hover{ color: #D4F7D4; }
+
+    /* Home */
+    #home{
+        background-image: url("images/home-desktop.jpg");
+        background-attachment: fixed; 
+    }
+    #welcome{ font-size: 50px; }
+    #job{ font-size: 30px; }
+    .portfolio-button:hover{ font-size: 30px; }
+    
+    /* About */
+    #forHeader{
+        background-color: #341109;
+        height: 55px;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+    }
+    #about{ height: 100vh; }
+    #skillSet{
+        display: flex;
+        width: 800px;
+        margin: auto;
+    }
+    .wrapper{ margin-top: 0px; }
+
+    /* Portfolio */
+    #portfolio{
+        height: 100vh;
+    }
+    #projectContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 1360px;
+        margin: auto;
+    }
+    .projects, 
+    .project-image { 
+        width: 400px; 
+    }
+    .projects{
+        margin: 20px;
+    }
+    .projectDescription{
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+    .projectLink, .githubLink{
+        margin: 0px 20px;
+    }
+
+    /* Modal for Contact */
+    .modal-dialog{
+        width: 600px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 600px){
+    .topnav a.navLink { display: none; }
+}
